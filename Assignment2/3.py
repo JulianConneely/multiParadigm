@@ -5,9 +5,9 @@ def removeOdds(array):
     if not array:
         return []
     # otherwise use modulo to check that the value in the 1st position of the array 
-    # does not return a remainder.
-    if array[0] % 2 == 1:
-        # return the odd number and continue recursion
+    # returns a remainder.
+    if array[0] % 2 == 0:
+        # if it does not (ie is even) return the even number and continue recursion
         return [array[0]] + removeOdds(array[1:])
     return removeOdds(array[1:])
 
